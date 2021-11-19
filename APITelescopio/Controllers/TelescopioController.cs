@@ -8,7 +8,6 @@ namespace APITelescopio.Controllers
     [ApiController]
     public class TelescopioController : ControllerBase
     {
-
         private static readonly string[] TiposDeCuerpo = new string[3] { "Planeta", "Estrella", "Satelite" };
 
         [HttpGet]

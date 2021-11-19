@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITelescopio", "APITelescopio\APITelescopio.csproj", "{A096FC8D-6615-4B0A-8A94-E416A6C76A43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITelescopio", "APITelescopio\APITelescopio.csproj", "{A096FC8D-6615-4B0A-8A94-E416A6C76A43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRegistro", "APIRegistro\APIRegistro.csproj", "{FEE26A29-A1B6-40F9-AA92-8D0ED1171C92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIRegistro", "APIRegistro\APIRegistro.csproj", "{FEE26A29-A1B6-40F9-AA92-8D0ED1171C92}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web\", "{BAF8A046-2CEE-47BB-8737-BFC9626C4C14}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -25,6 +25,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web\", "{BAF8A046-2C
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "51908"
+		SlnRelativePath = "Web\"
 	EndProjectSection
 EndProject
 Global
