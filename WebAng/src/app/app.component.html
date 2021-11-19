@@ -1,0 +1,103 @@
+<div class="container-fluid wrapper" style="height: 100vh; background-color: #eeee;">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>SIMA</mat-card-title>
+      <mat-card-subtitle>Sistema de Identificación y Medición Aeroespacial </mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content class="">
+      <p style="text-align: center; margin-top: 15px;">
+        <strong>Instrucciones:</strong>
+      </p>
+      <ul>
+        <li>Comience la recolección de datos</li>
+        <li>Detenga la recolección de datos cuando lo desee</li>
+        <li>El reporte se mostrará con los datos obtenidos</li>
+      </ul>
+      <div class="mt-4 mb-4">
+        <button mat-raised-button [color]="recolectando ? 'warn' : 'accent'" (click)="onClick()">
+          {{ recolectando ? 'Detener': 'Comenzar' }}
+        </button>
+      </div>
+      <div class="mt-4">
+        <mat-spinner *ngIf="recolectando" color="primary"></mat-spinner>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="table-wrapper" *ngIf="dataSource.data .length > 0">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="estrellas">
+            <th mat-header-cell *matHeaderCellDef> Estrellas </th>
+            <td mat-cell *matCellDef="let element"> {{element.estrellas}} </td>
+          </ng-container>
+          <ng-container matColumnDef="planetas">
+            <th mat-header-cell *matHeaderCellDef> Planetas </th>
+            <td mat-cell *matCellDef="let element"> {{element.planetas}} </td>
+          </ng-container>
+          <ng-container matColumnDef="satelites">
+            <th mat-header-cell *matHeaderCellDef> Satelites </th>
+            <td mat-cell *matCellDef="let element"> {{element.satelites}} </td>
+          </ng-container>
+
+          <!-- Promedio Distancias -->
+          <ng-container matColumnDef="promediodistanciaestrellas">
+            <th mat-header-cell *matHeaderCellDef> Prom Dist. Estrellas </th>
+            <td mat-cell *matCellDef="let element"> {{element.promedioDistanciaEstrellas | number: '1.2-2' }} </td>
+          </ng-container>
+          <ng-container matColumnDef="promediodistanciaplanetas">
+            <th mat-header-cell *matHeaderCellDef> Prom Dist. Planetas </th>
+            <td mat-cell *matCellDef="let element"> {{element.promedioDistanciaPlanetas | number: '1.2-2' }} </td>
+          </ng-container>
+          <ng-container matColumnDef="promediodistanciasatelites">
+            <th mat-header-cell *matHeaderCellDef> Prom Dist. Satelites </th>
+            <td mat-cell *matCellDef="let element"> {{element.promedioDistanciaSatelites | number: '1.2-2' }} </td>
+          </ng-container>
+
+          <!-- Promedio Tamaños -->
+          <ng-container matColumnDef="promediotamestrellas">
+            <th mat-header-cell *matHeaderCellDef> Prom Tam. Estrellas </th>
+            <td mat-cell *matCellDef="let element"> {{element.promedioTamEstrellas | number: '1.2-2' }} </td>
+          </ng-container>
+          <ng-container matColumnDef="promediotamplanetas">
+            <th mat-header-cell *matHeaderCellDef> Prom Tam. Planetas </th>
+            <td mat-cell *matCellDef="let element"> {{element.promedioTamPlanetas | number: '1.2-2' }} </td>
+          </ng-container>
+          <ng-container matColumnDef="promediotamsatelites">
+            <th mat-header-cell *matHeaderCellDef> Prom Tam. Satelites </th>
+            <td mat-cell *matCellDef="let element"> {{element.promedioTamSatelites | number: '1.2-2' }} </td>
+          </ng-container>
+
+          <!-- Promedio Temperatura -->
+          <ng-container matColumnDef="promediotemperaturaestrellas">
+            <th mat-header-cell *matHeaderCellDef> Prom Temp. Estrellas </th>
+            <td mat-cell *matCellDef="let element"> {{element.promedioTemperaturaEstrellas | number: '1.2-2' }} </td>
+          </ng-container>
+
+          <!-- Moda -->
+          <ng-container matColumnDef="moda">
+            <th mat-header-cell *matHeaderCellDef> Moda </th>
+            <td mat-cell *matCellDef="let element"> {{element.moda}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+      <div>
+
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-mini-fab color="accent">
+        <mat-icon>recommend</mat-icon>
+      </button>&nbsp;
+      <button mat-mini-fab color="primary">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-card-actions>
+    <mat-card-footer style="background-color: darkblue;">
+      <div style="height: 5px;"></div>
+    </mat-card-footer>
+  </mat-card>
+  
+</div>

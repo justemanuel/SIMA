@@ -1,0 +1,79 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.example-card {
+    width: 90%;
+}
+
+.example-header-image {
+    //background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('https://phantom-elmundo.unidadeditorial.es/d062673f80d7230bac6c1364e37c9596/resize/473/f/webp/assets/multimedia/imagenes/2021/07/26/16272831918796.jpg');
+    background-size: cover;
+}
+
+.mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.table-wrapper {
+    overflow: auto;
+    width: 90%;
+    padding: 15px;
+    max-height: 500px;
+}
+
+table {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.mat-card-actions {
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+// .table-responsive {
+//     display: block;
+//     width: 100%;
+//     overflow-x: auto;
+    
+//     .mat-table {
+//         width: 100%;
+//         max-width: 100%;
+//         margin-bottom: 1rem;
+//         display: table;
+//         border-collapse: collapse;
+//         margin: 0px;
+//     }
+    
+//     .mat-row,
+//     .mat-header-row {
+//         display: table-row;
+//     }
+    
+//     .mat-cell,
+//     .mat-header-cell {
+//         word-wrap: initial;
+//         display: table-cell;
+//         padding: 0px 5px;
+//         line-break: unset;
+//         width: 100%;
+//         white-space: nowrap;
+//         overflow: hidden;
+//         vertical-align: middle;
+//     }
+//     }
