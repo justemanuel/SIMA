@@ -21,7 +21,7 @@
         </button>
       </div>
       <div class="mt-4">
-        <mat-spinner *ngIf="recolectando" color="primary"></mat-spinner>
+        <mat-spinner *ngIf="recolectando" color="primary" [diameter]="50"></mat-spinner>
       </div>
       <mat-divider></mat-divider>
       <div class="table-wrapper" *ngIf="dataSource.data .length > 0">
@@ -91,9 +91,11 @@
       <button mat-mini-fab color="accent">
         <mat-icon>recommend</mat-icon>
       </button>&nbsp;
-      <button mat-mini-fab color="primary">
-        <mat-icon>share</mat-icon>
-      </button>
+      <a href="https://github.com/justemanuel/SIMA" target="_blank">
+        <button mat-mini-fab color="primary">
+          <mat-icon>code</mat-icon>
+        </button>
+      </a>
     </mat-card-actions>
     <mat-card-footer style="background-color: darkblue;">
       <div style="height: 5px;"></div>
